@@ -1,21 +1,17 @@
 
-const express = require('express');
+
+import express from "express";
+import { Server} from "socket.io";
+import expressLayout from 'express-ejs-layouts'
 const app = express();
 const PORT = 3000;
-const socketio = require('socket.io');
-const session = require('express-session');
-const expressLayout = require('express-ejs-layouts')
 
 app.use(express.json());
 app.set('view engine', 'ejs');
 app.use(expressLayout);
 app.use(express.static('views'));
 app.use(express.static('public'));
-app.use(session({
-    secret:'1234567890',
-    resave:false,
-    saveUninitialized:false
-}))
+
 
 app.get('/',(req,res)=>{
     res.render('index');
@@ -27,7 +23,7 @@ let server = app.listen(PORT,()=>{
     console.log(`listening on http://localhost:${PORT}`);
 })
 
-let io = socketio(server,{});
+let io = new Server(server,{});
 
 io.on('connect',(socket)=>{
     console.log(socket.id,"data")

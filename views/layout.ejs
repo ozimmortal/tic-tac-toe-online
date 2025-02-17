@@ -23,10 +23,64 @@
     <%- body %>
     
       <div class="rules">
-        <a href="https://github.com/sponsors/chr15m" class="button"><button style="background-color: #3C3C3C; color: white; border-radius: 8px; font-size: 0.5em; display: inline-flex; align-items: center; cursor: pointer;">
+        <a class="button" id="modal-btn"><button style="background-color: #3C3C3C; color: white; border-radius: 8px; font-size: 0.5em; display: inline-flex; align-items: center; cursor: pointer;">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
            <hr>Rules
       </button></a>
+    </div>
+      <div class="modal-container" id="modal-con">
+        <div class="title-container">
+          <p>Rules</p>
+            <span class="button" id="cancle-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 250"><path d="M209.5 188.5c-.7-3.7-4.7-5-7.2-7.3a222.7 222.7 0 0 1-20-19 4044.4 4044.4 0 0 1-45.8-49.5c62.7-62.8 69.3-57.1 69.6-64-4.5-14.5-19.7.8-26.7 5.5-18 13.9-37 31.2-53.1 47.2a7446 7446 0 0 1-46.8-52c-3-7.3-17-7.2-15.2 2.1C80.7 72.2 98 92.1 115.8 112a679.3 679.3 0 0 0-74 85c-2.6 3.1-1 7.7 2.4 9.3 6.3 3.4 12-1.1 15-6.5a758.4 758.4 0 0 1 66.9-76.5c44.4 49 54.7 60.5 70 71.2 4.7 3.6 14.3 1 13.4-6Z" fill="#3C3C3C"></path></svg>          </span>
+          </span>
+         
+        </div>
+        <div class="main-container">
+          <p>Tic-Tac-Toe is a simple two-player game played on a 3×3 grid. Players take turns marking a space with either an <b>X</b> or an <b>O</b>. The first player to get three of their marks in a row (vertically, horizontally, or diagonally) wins!</p>
+          <h4>Game Setup</h4>
+          <ul>
+              <li>The game is played on a 3×3 grid.</li>
+              <li>One player is assigned <b>X</b> and the other <b>O</b>.</li>
+              <li>Players take turns placing their symbol in an empty square.</li>
+          </ul>
+          <h4>How to Win</h4>
+          <ul>
+              <li>A player wins if they place three of their marks in a row (vertically, horizontally, or diagonally).</li>
+              <li>If all nine squares are filled and no one has won, the game is a <b>draw</b>.</li>
+          </ul>
+          <h4>Basic Strategy</h4>
+          <ul>
+              <li>Try to get three in a row before your opponent.</li>
+              <li>Block your opponent from getting three in a row.</li>
+              <li>Control the center square for the best strategic advantage.</li>
+          </ul>
+      </div>
+      <div class="footer">Enjoy your game and have fun!</div>
+      </div>
+
+      <script>
+        const modal = document.getElementById('modal-con');
+        const modalBtn = document.getElementById('modal-btn');
+        const cancleBtn = document.getElementById('cancle-btn');
+        const body = document.querySelector('body');
+        let visible = false;
+        console.log(cancleBtn)
+        cancleBtn.onclick = ()=>{
+          if(visible) {
+            modal.style.display = 'none';
+            visible = false
+
+          }
+        }
+       
+        modalBtn.onclick = ()=>{
+         if(!visible){
+           modal.style.display = 'flex';
+           visible = true
+         };
+        }
+      </script>
     
 </body>
 </html>

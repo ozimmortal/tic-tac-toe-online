@@ -51,7 +51,7 @@
    display: inline-block;
  }
  
- .doodle fieldset, .doodle textarea, .card {
+ .doodle fieldset, .doodle textarea, .card, .modal-container {
    border-style: solid;
    border-width: 10px;
    border-image: url(border.svg) 10 stretch;
@@ -284,4 +284,55 @@
  p {
    margin-top: 0;
  }
+ .modal-container {
+  width: 500px;
+  height: 600px;
+  position: absolute;
+  z-index: 100;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); 
+  background-color: white;
+  padding: 5px;
+  display: none;
+  flex-direction: column;
+  overflow-y: auto; 
+  padding-right: 10px;
  
+}
+.title-container {
+  padding: 5px;
+  width: 100%;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; 
+  align-items: center;
+   margin-top: 0;
+   border-style: solid;
+   border-width: 0px 3px 6px 3px;
+   border-image: url(hr.svg) 0 3 6 3 stretch;
+   margin-bottom: 10px;
+}
+.main-container p,.main-container li{
+  font-size: large;
+}
+
+
+.title-container p {
+  margin: 0;
+}
+
+.title-container span.button {
+  width: 30px;
+  height: 30px;
+  border: 1px solid black;
+  color: #3c3c3c;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  cursor: pointer;
+  border-radius: 5px; 
+}
+
+
