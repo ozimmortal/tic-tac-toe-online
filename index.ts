@@ -4,9 +4,7 @@ const app = express();
 const PORT = 3000;
 const socketio = require('socket.io');
 const session = require('express-session');
-const mongoose = require('mongoose');
 const expressLayout = require('express-ejs-layouts')
-const uri = "mongodb+srv://zaleambo:<oliy2627>@freecode.nyvmf3r.mongodb.net/?retryWrites=true&w=majority&appName=freecode";
 
 app.use(express.json());
 app.set('view engine', 'ejs');

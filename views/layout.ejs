@@ -4,89 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TicTacToe</title>
-    <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    <link rel="stylesheet" href="/css/doodle.css">
     <style>
-        body{
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-        }
-        .container{
-            width: 100vw;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-
-        }
+        
   </style>
 </head>
-<body>
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-          <a class="navbar-item bold" href="#">
-            TIC TAC TOE
-          </a>
-      
-          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </a>
-        </div>
-      
-        <div id="navbarBasicExample" class="navbar-menu">
-          <div class="navbar-start">
-        </div>
-          <div class="navbar-end">
-            <div class="navbar-item">
-              <div class="buttons">
-                <a class="button is-primary">
-                  <strong>Sign up</strong>
-                </a>
-              <div>
-            </div>
-          </div>
-        </div>
-      </nav>
+<body class="doodle">
+    <nav class="navbar">
+      <div class="start-nav">
+        <h3>Tic Tac Toe</h3>
+      </div>
+      <div class="end">
+        <a href="/signup" class="button"><button style="background-color: #3C3C3C; color: white; border-radius: 8px; font-size: 0.5em; display: inline-flex; align-items: center; cursor: pointer;">
+            Sign Up
+        </button></a>
+      </div>
+    </nav>
     <%- body %>
     
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-
-// Get all "navbar-burger" elements
-const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-
-// Add a click event on each of them
-$navbarBurgers.forEach( el => {
-  el.addEventListener('click', () => {
-
-    // Get the target from the "data-target" attribute
-    const target = el.dataset.target;
-    const $target = document.getElementById(target);
-
-    // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-    el.classList.toggle('is-active');
-    $target.classList.toggle('is-active');
-
-  });
-});
-
-});
-$(document).ready(function() {
-
-// Check for click events on the navbar burger icon
-$(".navbar-burger").click(function() {
-
-    // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-    $(".navbar-burger").toggleClass("is-active");
-    $(".navbar-menu").toggleClass("is-active");
-
-});
-});
-    </script>
+      <div class="rules">
+        <a href="https://github.com/sponsors/chr15m" class="button"><button style="background-color: #3C3C3C; color: white; border-radius: 8px; font-size: 0.5em; display: inline-flex; align-items: center; cursor: pointer;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+           <hr>Rules
+      </button></a>
+    
 </body>
 </html>

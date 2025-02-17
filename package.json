@@ -5,22 +5,30 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js"
+    "start": "tsc && nodemon dist/index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "packageManager": "pnpm@10.4.0+sha512.6b849d0787d97f8f4e1f03a9b8ff8f038e79e153d6f11ae539ae7c435ff9e796df6a862c991502695c7f9e8fac8aeafc1ac5a8dab47e36148d183832d886dd52",
   "dependencies": {
+    "better-auth": "^1.1.18",
+    "dotenv": "^16.4.7",
+    "drizzle-orm": "^0.39.3",
     "ejs": "^3.1.10",
     "express": "^4.21.2",
     "express-ejs-layouts": "^2.5.1",
     "express-session": "^1.18.1",
     "mongodb": "^6.13.0",
     "mongoose": "^8.10.1",
+    "pg": "^8.13.3",
     "socket.io": "^4.8.1"
   },
   "devDependencies": {
-    "nodemon": "^3.1.9"
+    "@types/pg": "^8.11.11",
+    "drizzle-kit": "^0.30.4",
+    "nodemon": "^3.1.9",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3"
   }
 }
